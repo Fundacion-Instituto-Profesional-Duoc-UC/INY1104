@@ -2,4 +2,4 @@
 
 Scripts for INY1104
 
-- Ejemplo e-commerce
+- Ejemplo de front e-commerce para el examen https://github.com/v-teacher/INY1104/tree/main/e-commerce
