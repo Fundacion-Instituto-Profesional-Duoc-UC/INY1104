@@ -20,6 +20,19 @@ jobs:
     if: ${{ vars.USE_VARIABLES == 'true' }}
     runs-on: ${{ vars.RUNNER }}
     environment: ${{ vars.ENVIRONMENT_STAGE }}
+
+    steps:
+      - name: Display variables
+        run: |
+          echo "AWS_REGION=$AWS_REGION"
+          echo "ECR_REPOSITORY=$ECR_REPOSITORY"
+          echo "IMAGE_TAG=$IMAGE_TAG"
+          echo "KUBE_CONFIG_DATA=$KUBE_CONFIG_DATA"
+          echo "RUNNER=$RUNNER"
+          echo "ENVIRONMENT_STAGE=$ENVIRONMENT_STAGE"
+          echo "USE_VARIABLES=$USE_VARIABLES"
+          echo "JOB_NAME=$JOB_NAME"
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
