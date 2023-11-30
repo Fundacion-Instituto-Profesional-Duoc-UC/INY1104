@@ -5,9 +5,9 @@ on:
     branches: ["main"]
 
 env:
-  AWS_REGION: ${{ AWS_REGION }} # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: ${{ ECR_REPOSITORY }} # set this to your Amazon ECR repository name
-  # KUBE_CONFIG_DATA: ${{ env.KUBE_CONFIG_DATA }} # set this to your base64-encoded Kubernetes configuration
+  AWS_REGION: ${{ vars.AWS_REGION }} # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }} # set this to your Amazon ECR repository name
+  # KUBE_CONFIG_DATA: #${{ vars.KUBE_CONFIG_DATA }} # set this to your base64-encoded Kubernetes configuration
   IMAGE_TAG: ${{ github.sha }} # set the image tag to the GitHub commit SHA
 
 permissions:
