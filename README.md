@@ -26,7 +26,7 @@ Esta actividad consiste en ... -->
 
 ## CONTRIBUCIONES
 
-Contribuciones son bienvenidas! Revisa nuestra [Guía de Contribuciones](./docs/contributors.md)
+Contribuciones son bienvenidas! Revisa nuestra [Guía de Contribuciones](./docs/CONTRIBUTING.md)
 
 ## CÓDIGO DE CONDUCTA
 
