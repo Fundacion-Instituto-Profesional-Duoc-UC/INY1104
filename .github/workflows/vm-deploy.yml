@@ -33,4 +33,4 @@ jobs:
           ADMIN_USERNAME: ${{ vars.ADMIN_USERNAME }}
           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
           IMAGE: ${{ vars.IMAGE }}
-        run: bash deploy-vm.sh
+        run: bash vm-az-deploy.sh
