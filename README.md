@@ -8,9 +8,11 @@
 
 # ACTIVIDADES
 
-- EA4 - Actividad 4.4 - Scripts Base de datos SQL y NO/SQL https://github.com/v-teacher/INY1104/tree/main/ea4-act4.4
+- EA3 - Actividad 3.1 - [Script ejemplo de despligue de Maquina Virtual en Azure](https://github.com/v-teacher/INY1104/tree/main/vm-az-deploy.sh)
 
-- Front Example e-commerce para el examen https://github.com/v-teacher/INY1104/tree/main/e-commerce
+- EA4 - Actividad 4.4 - [Scripts Base de datos SQL y NO/SQL](https://github.com/v-teacher/INY1104/tree/main/ea4-act4.4)
+
+- Front [Example](https://github.com/v-teacher/INY1104/tree/main/e-commerce) e-commerce para el examen
 
 <!-- ## ANTECEDENTES GENERALES
 
