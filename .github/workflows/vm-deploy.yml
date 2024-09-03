@@ -1,0 +1,36 @@
+name: Deploy Windows Server
+
+run-name: Windows Server VM ${{ github.ref_name }} by @${{ github.actor }}
+
+on:
+  push:
+    branches: [development, testing, release]
+    paths-ignore:
+      - ".github/**"
+      - ".test/**"
+  workflow_dispatch:
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy VM
+        env:
+          RESOURCE_GROUP: ${{ vars.RESOURCE_GROUP }}
+          LOCATION: ${{ vars.LOCATION }}
+          VM_NAME: ${{ vars.VM_NAME }}
+          VNET_NAME: ${{ vars.VNET_NAME }}
+          SUBNET_NAME: ${{ vars.SUBNET_NAME }}
+          NIC_NAME: ${{ vars.NIC_NAME }}
+          ADMIN_USERNAME: ${{ vars.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          IMAGE: ${{ vars.IMAGE }}
+        run: bash deploy-vm.sh
